@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0b0d" />
+    <meta name="description" content="Interactive portfolio of an independent developer and digital maker." />
+    <title>HERBA — Digital Maker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/content.js" defer></script>
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#work">Skip to projects</a>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="pointer-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Home"><span data-name>HERBA</span><i></i></a>
+      <nav aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button command-button" type="button" aria-label="Open command menu">
+          <span>⌘</span><kbd>K</kbd>
+        </button>
+        <button class="icon-button theme-button" type="button" aria-label="Change color mode">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42M7.06 16.94l-1.42 1.42M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-meta reveal">
+          <span class="eyebrow">Independent practice</span>
+          <span class="availability"><i></i><span data-availability>Available</span></span>
+        </div>
+        <h1 id="hero-title" class="reveal">
+          <span>I build digital</span>
+          <span class="outline-word" data-scramble="things.">things.</span>
+          <span>that <em>move.</em></span>
+        </h1>
+        <div class="hero-footer reveal">
+          <p data-intro>I turn ambitious ideas into fast, useful digital products.</p>
+          <a class="round-link" href="#work" aria-label="View selected work">
+            <span>Explore</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg>
+          </a>
+        </div>
+        <div class="hero-index" aria-hidden="true">A<span>/</span>26</div>
+      </section>
+
+      <section class="marquee" aria-label="Services">
+        <div class="marquee-track" data-services></div>
+      </section>
+
+      <section class="work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">Selected transmissions</span>
+            <h2 id="work-title">Recent work</h2>
+          </div>
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button class="filter active" data-filter="all" type="button">All</button>
+            <button class="filter" data-filter="product" type="button">Product</button>
+            <button class="filter" data-filter="commerce" type="button">Commerce</button>
+            <button class="filter" data-filter="experiment" type="button">Experiments</button>
+          </div>
+        </div>
+        <div class="project-grid" data-projects></div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="about-number reveal">02</div>
+        <div class="about-copy reveal">
+          <span class="eyebrow">Operating principle</span>
+          <h2 id="about-title">Clarity first.<br />Character always.</h2>
+          <p>I work across strategy, interface and code. The goal is never more technology—it is a sharper idea, made real with fewer moving parts.</p>
+        </div>
+        <dl class="facts reveal">
+          <div><dt>Based</dt><dd data-location>Serbia · worldwide</dd></div>
+          <div><dt>Focus</dt><dd>Useful digital products</dd></div>
+          <div><dt>Mode</dt><dd>Independent / collaborative</dd></div>
+        </dl>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <span class="eyebrow reveal">Have a project in mind?</span>
+        <h2 id="contact-title" class="reveal">Let’s make<br /><span>contact.</span></h2>
+        <div class="contact-row reveal">
+          <button class="email-copy" type="button" data-email-copy>
+            <span data-email>hello@example.com</span>
+            <small>Click to copy</small>
+          </button>
+          <div class="social-links" data-links></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© <span data-year></span> <span data-name>HERBA</span></span>
+      <span class="system-status"><i></i> System online · <span data-domain>a.xn--1ea.cc</span></span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <dialog class="project-dialog" data-project-dialog aria-labelledby="dialog-title">
+      <button class="dialog-close" type="button" aria-label="Close project">×</button>
+      <div class="dialog-project-number" data-dialog-number></div>
+      <p class="eyebrow" data-dialog-category></p>
+      <h2 id="dialog-title" data-dialog-title></h2>
+      <p class="dialog-lead" data-dialog-short></p>
+      <div class="dialog-details">
+        <div><span>Challenge</span><p data-dialog-challenge></p></div>
+        <div><span>Outcome</span><p data-dialog-outcome></p></div>
+      </div>
+      <div class="tag-list" data-dialog-tags></div>
+    </dialog>
+
+    <dialog class="command-dialog" data-command-dialog aria-label="Command menu">
+      <div class="command-search">
+        <span>›</span>
+        <input data-command-input type="text" autocomplete="off" placeholder="Where should we go?" aria-label="Search commands" />
+        <kbd>ESC</kbd>
+      </div>
+      <div class="command-list" role="listbox" aria-label="Available commands"></div>
+    </dialog>
+
+    <div class="toast" role="status" aria-live="polite" data-toast>Email copied to clipboard</div>
+  </body>
+</html>
